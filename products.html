@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品一覧 | STYLE DEMO</title>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="products">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="gtm-banner">
+    <strong>📌 研修用テストサイト</strong> — 課題3: カテゴリフィルター・商品カードのクリック計測 ／ 課題5: スクロール50%の計測を練習できます
+  </div>
+
+  <header class="header">
+    <a href="index.html" class="logo">STYLE DEMO</a>
+    <nav>
+      <a href="products.html">商品一覧</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <a href="cart.html" class="cart-icon" aria-label="カート">
+      <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <span class="cart-count" style="display:none">0</span>
+    </a>
+  </header>
+
+  <div class="section">
+    <h1 class="section-title">商品一覧</h1>
+
+    <!-- カテゴリフィルター（課題3：クリック計測の練習対象） -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-category="all" id="filter-all">すべて</button>
+      <button class="filter-btn" data-category="tops"    id="filter-tops">トップス</button>
+      <button class="filter-btn" data-category="bottoms" id="filter-bottoms">ボトムス</button>
+      <button class="filter-btn" data-category="acc"     id="filter-acc">アクセサリー</button>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+
+    <!-- スクロール計測の練習用：縦に長くするためのダミーコンテンツ -->
+    <div style="margin-top:48px; padding:32px; background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.06);">
+      <h3 style="font-size:16px; font-weight:700; margin-bottom:12px;">スタイリングのヒント</h3>
+      <p style="color:#666; font-size:14px; line-height:1.9;">
+        オーバーサイズシルエットが今シーズンのキーワード。
+        ゆったりとしたトップスにテーパードパンツを合わせることで、
+        全体のバランスを整えつつスタイリッシュな印象に仕上げることができます。
+        カラーパレットはモノトーンを基調に、小物でアクセントをプラスするのがおすすめです。
+      </p>
+      <p style="color:#666; font-size:14px; line-height:1.9; margin-top:12px;">
+        素材選びも重要なポイントです。
+        コットン・リネン・ウールなど天然素材は、着心地が良く長く使えます。
+        特にオーガニックコットンは肌への刺激が少なく、敏感肌の方にも人気があります。
+      </p>
+      <p style="color:#888; font-size:12px; margin-top:20px;">
+        ↑ このコンテンツは課題5「スクロール深度計測」の練習用です。
+        このページ（商品一覧）でスクロールして50%地点を通過したときにGA4イベントが送信されるか確認してみましょう。
+      </p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© STYLE DEMO — GTM・GA4 研修用テストサイト</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

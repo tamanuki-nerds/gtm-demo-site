@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>クラウド勤怠管理ツール「TimeSync」｜無料資料請求</title>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    /* LPページ固有スタイル */
+    body { background: #f0f4f8; }
+    .lp-hero { background: linear-gradient(135deg, #0f3460 0%, #16213e 100%); color: #fff; padding: 64px 24px; text-align: center; }
+    .lp-hero .label { display: inline-block; background: #e0c97f; color: #1a1a2e; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .lp-hero h1 { font-size: 32px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; }
+    .lp-hero p { font-size: 15px; color: #aac4e0; }
+    .lp-body { max-width: 980px; margin: 0 auto; padding: 48px 24px; display: grid; grid-template-columns: 1fr 380px; gap: 40px; align-items: start; }
+    @media (max-width: 760px) { .lp-body { grid-template-columns: 1fr; } }
+
+    /* 特徴セクション */
+    .features { }
+    .features h2 { font-size: 20px; font-weight: 700; margin-bottom: 24px; }
+    .feature-list { display: flex; flex-direction: column; gap: 16px; }
+    .feature-item { background: #fff; border-radius: 8px; padding: 20px; display: flex; gap: 16px; align-items: flex-start; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+    .feature-icon { font-size: 32px; flex-shrink: 0; width: 48px; text-align: center; }
+    .feature-item h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .feature-item p { font-size: 13px; color: #666; line-height: 1.7; }
+
+    /* 実績バッジ */
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 32px 0; }
+    .stat-box { background: #fff; border-radius: 8px; padding: 16px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+    .stat-box .num { font-size: 28px; font-weight: 700; color: #0f3460; }
+    .stat-box .unit { font-size: 13px; color: #888; margin-top: 4px; }
+
+    /* フォームカード */
+    .form-card { background: #fff; border-radius: 12px; padding: 28px 24px; box-shadow: 0 4px 20px rgba(0,0,0,.10); position: sticky; top: 72px; }
+    .form-card h2 { font-size: 17px; font-weight: 700; text-align: center; margin-bottom: 6px; }
+    .form-card .sub { font-size: 12px; color: #888; text-align: center; margin-bottom: 20px; }
+    .form-card .form-group { margin-bottom: 14px; }
+    .form-card label { font-size: 12px; font-weight: 600; color: #555; display: block; margin-bottom: 4px; }
+    .form-card label .req { color: #e53e3e; margin-left: 3px; }
+    .form-card input, .form-card select { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 13px; }
+    .form-card input:focus, .form-card select:focus { outline: none; border-color: #0f3460; }
+    .form-error { color: #e53e3e; font-size: 11px; margin-top: 3px; display: none; }
+    .form-error.visible { display: block; }
+    .privacy-check { display: flex; align-items: flex-start; gap: 8px; margin: 14px 0; font-size: 12px; color: #555; }
+    .privacy-check input { width: auto; margin-top: 2px; }
+    .btn-lp-submit { width: 100%; padding: 14px; background: #e53e3e; color: #fff; border: none; border-radius: 6px; font-weight: 700; font-size: 15px; cursor: pointer; transition: opacity .2s; margin-top: 4px; }
+    .btn-lp-submit:hover { opacity: .85; }
+    .form-note { font-size: 11px; color: #aaa; text-align: center; margin-top: 8px; }
+
+    /* 送信完了 */
+    .form-success { display: none; text-align: center; padding: 20px 0; }
+    .form-success .icon { font-size: 48px; margin-bottom: 12px; }
+    .form-success h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .form-success p { font-size: 13px; color: #666; line-height: 1.7; }
+
+    /* 研修バナー */
+    .gtm-banner code { background: #fef3c7; padding: 1px 4px; border-radius: 3px; font-size: 11px; }
+    .checklist { background: #f0fff4; border: 1px solid #9ae6b4; border-radius: 6px; padding: 16px 20px; margin-top: 32px; font-size: 13px; }
+    .checklist h4 { color: #276749; font-weight: 700; margin-bottom: 8px; }
+    .checklist ul { padding-left: 18px; color: #555; line-height: 2; }
+  </style>
+</head>
+<body data-page="form_lp">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="gtm-banner">
+    <strong>📌 研修用テストサイト（LPページ）</strong> — URLが変わらないフォーム完結型LP。課題3応用：
+    <code>dataLayer</code> カスタムイベントでCV計測する練習ページです。
+  </div>
+
+  <!-- LPヘッダー（ナビなし・LP定番スタイル） -->
+  <header style="background:#0f3460; padding:14px 24px; display:flex; align-items:center; justify-content:space-between;">
+    <span style="color:#e0c97f; font-weight:700; font-size:16px; letter-spacing:.05em;">TimeSync</span>
+    <a href="#form-card" style="background:#e53e3e; color:#fff; padding:8px 20px; border-radius:4px; font-size:13px; font-weight:600;">無料資料請求</a>
+  </header>
+
+  <!-- ヒーロー -->
+  <section class="lp-hero">
+    <span class="label">導入実績 2,400社突破</span>
+    <h1>打刻・集計・申請を<br>まるごとクラウドへ。</h1>
+    <p>中小企業の勤怠管理を月額3,000円〜で完全デジタル化。<br>今すぐ無料資料をダウンロードできます。</p>
+  </section>
+
+  <!-- ボディ -->
+  <div class="lp-body">
+
+    <!-- 左カラム：特徴・実績 -->
+    <div class="features">
+      <div class="stats">
+        <div class="stat-box"><div class="num">2,400<span style="font-size:16px;">+</span></div><div class="unit">導入企業数</div></div>
+        <div class="stat-box"><div class="num">99.9<span style="font-size:16px;">%</span></div><div class="unit">稼働率</div></div>
+        <div class="stat-box"><div class="num">4.8<span style="font-size:16px;">/5</span></div><div class="unit">顧客満足度</div></div>
+      </div>
+
+      <h2>選ばれる3つの理由</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-icon">📱</div>
+          <div>
+            <h3>スマホ・PCどこでも打刻</h3>
+            <p>GPS打刻・顔認証・ICカードに対応。テレワーク・外回りにも対応した柔軟な打刻方法を選べます。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">⚡</div>
+          <div>
+            <h3>法改正にも自動対応</h3>
+            <p>労働基準法・時間外労働の上限規制に自動追従。アップデートは無料で提供されます。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🔗</div>
+          <div>
+            <h3>給与ソフトとAPI連携</h3>
+            <p>freee・弥生・マネーフォワードと連携。勤怠データを給与計算に自動反映し、二重入力を解消します。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 研修用チェックリスト -->
+      <div class="checklist">
+        <h4>✅ このページで練習できること（課題3応用）</h4>
+        <ul>
+          <li>フォーム送信トリガー vs. カスタムイベントトリガーの違いを体験</li>
+          <li>URLが変わらないCV計測（SPAやLP型で頻出）</li>
+          <li>チェックボックスの状態を <code>dataLayer</code> に渡す</li>
+          <li><code>inquiry_type</code>（会社規模）をイベントパラメータとして送る</li>
+          <li>フォームバリデーションエラーの計測</li>
+        </ul>
+        <p style="font-size:12px; color:#888; margin-top:8px;">
+          → 課題手順は <code>docs/02_exercises.md</code>（GitHubリポジトリまたはエディタで確認）の「課題7（LP型フォームCV）」を参照
+        </p>
+      </div>
+    </div>
+
+    <!-- 右カラム：フォーム -->
+    <div class="form-card" id="form-card">
+      <h2>無料資料をダウンロード</h2>
+      <p class="sub">フォーム送信後すぐにダウンロードできます</p>
+
+      <form id="lpForm" novalidate>
+        <div class="form-group">
+          <label for="lp_name">担当者名 <span class="req">*</span></label>
+          <input type="text" id="lp_name" name="lp_name" placeholder="山田 太郎">
+          <p class="form-error" id="err_lp_name">担当者名を入力してください</p>
+        </div>
+        <div class="form-group">
+          <label for="lp_email">会社メールアドレス <span class="req">*</span></label>
+          <input type="email" id="lp_email" name="lp_email" placeholder="yamada@company.co.jp">
+          <p class="form-error" id="err_lp_email">メールアドレスを入力してください</p>
+        </div>
+        <div class="form-group">
+          <label for="lp_company">会社名 <span class="req">*</span></label>
+          <input type="text" id="lp_company" name="lp_company" placeholder="株式会社〇〇">
+          <p class="form-error" id="err_lp_company">会社名を入力してください</p>
+        </div>
+        <div class="form-group">
+          <label for="lp_size">従業員規模 <span class="req">*</span></label>
+          <select id="lp_size" name="lp_size">
+            <option value="">選択してください</option>
+            <option value="1-10">1〜10名</option>
+            <option value="11-50">11〜50名</option>
+            <option value="51-100">51〜100名</option>
+            <option value="101-300">101〜300名</option>
+            <option value="301+">301名以上</option>
+          </select>
+          <p class="form-error" id="err_lp_size">従業員規模を選択してください</p>
+        </div>
+        <div class="form-group">
+          <label for="lp_phone">電話番号</label>
+          <input type="tel" id="lp_phone" name="lp_phone" placeholder="03-0000-0000">
+        </div>
+        <div class="privacy-check">
+          <input type="checkbox" id="lp_privacy" name="lp_privacy">
+          <label for="lp_privacy" style="font-weight:400;">
+            <a href="#" style="color:#0f3460; text-decoration:underline;">プライバシーポリシー</a>に同意する
+          </label>
+        </div>
+        <p class="form-error" id="err_lp_privacy">プライバシーポリシーへの同意が必要です</p>
+        <button type="submit" class="btn-lp-submit" id="btnLpSubmit">無料資料をダウンロードする</button>
+        <p class="form-note">入力情報は資料送付・営業連絡のみに使用します</p>
+      </form>
+
+      <!-- 送信完了（同一ページ内で切り替わる→URLは変わらない） -->
+      <div class="form-success" id="lpFormSuccess">
+        <div class="icon">📄</div>
+        <h3>ありがとうございます！</h3>
+        <p>資料のダウンロードURLを<br>ご登録のメールアドレスにお送りしました。</p>
+        <div style="margin-top:20px; padding:14px; background:#fffbeb; border:1px solid #f6d860; border-radius:6px; text-align:left; font-size:12px;">
+          <strong style="color:#856404;">🔍 GTMプレビューで確認しよう</strong>
+          <ul style="margin-top:6px; padding-left:16px; color:#555; line-height:1.9;">
+            <li>URLは変わっていない（ページ遷移なし）</li>
+            <li>「カスタムイベント」トリガーが発火している</li>
+            <li>dataLayer変数で <code>company_size</code> の値が取得できている</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© TimeSync — GTM・GA4 研修用テストサイト（架空のサービスです）</p>
+    <p style="margin-top:6px;"><a href="index.html">← STYLE DEMOトップに戻る</a></p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    // ===== LP フォームの処理 =====
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('lpForm');
+      if (!form) return;
+
+      // フォームへの最初のフォーカス → エンゲージメント開始を計測
+      let engaged = false;
+      form.addEventListener('focusin', () => {
+        if (engaged) return;
+        engaged = true;
+        // 【研修ポイント】フォームを触り始めたタイミングを計測できる
+        pushEvent('form_start', { form_id: 'lpForm' });
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let hasError = false;
+
+        // バリデーション
+        ['lp_name', 'lp_email', 'lp_company', 'lp_size'].forEach(field => {
+          const input = document.getElementById(field);
+          const errEl = document.getElementById(`err_${field}`);
+          if (!input || !errEl) return;
+          if (!input.value.trim()) {
+            errEl.classList.add('visible');
+            hasError = true;
+          } else {
+            errEl.classList.remove('visible');
+          }
+        });
+
+        // プライバシーポリシー同意チェック
+        const privacy = document.getElementById('lp_privacy');
+        const privacyErr = document.getElementById('err_lp_privacy');
+        if (!privacy.checked) {
+          privacyErr.classList.add('visible');
+          hasError = true;
+        } else {
+          privacyErr.classList.remove('visible');
+        }
+
+        if (hasError) {
+          pushEvent('form_validation_error', { form_id: 'lpForm' });
+          return;
+        }
+
+        // ===== 【課題7のメイン】=====
+        // URLが変わらないためページビュートリガーでCVを計測できない
+        // → カスタムイベントトリガー "lp_cv" でGTMが受け取る
+        // → dataLayer変数 "company_size" をGA4イベントパラメータとして送る
+        pushEvent('lp_cv', {
+          form_id:      'lpForm',
+          company_size: document.getElementById('lp_size').value,
+          has_phone:    document.getElementById('lp_phone').value !== '',
+          currency:     'JPY',
+          value:        0
+        });
+
+        // フォームを非表示にして完了メッセージを表示（URLは変わらない）
+        form.style.display = 'none';
+        document.getElementById('lpFormSuccess').style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>

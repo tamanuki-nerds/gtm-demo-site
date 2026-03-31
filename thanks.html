@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>購入完了 | STYLE DEMO</title>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="thanks">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="gtm-banner">
+    <strong>📌 研修用テストサイト</strong> — 課題2のゴール: URLに "thanks.html" が含まれる場合にCV計測タグが発火していることをプレビューで確認しましょう
+  </div>
+
+  <header class="header">
+    <a href="index.html" class="logo">STYLE DEMO</a>
+    <nav>
+      <a href="products.html">商品一覧</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <a href="cart.html" class="cart-icon" aria-label="カート">
+      <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <span class="cart-count" style="display:none">0</span>
+    </a>
+  </header>
+
+  <div class="thanks-box">
+    <div class="thanks-icon">🎉</div>
+    <h1>ご注文ありがとうございます</h1>
+    <p>ご注文が完了しました。</p>
+    <p>確認メールをお送りしております。</p>
+    <div class="order-num" id="orderId">ORD-DEMO1</div>
+    <p id="orderTotal" style="font-size:14px; color:#888;"></p>
+
+    <!-- 研修用ヒント -->
+    <div style="margin-top:32px; padding:16px; background:#f0fff4; border:1px solid #9ae6b4; border-radius:6px; text-align:left; font-size:13px;">
+      <strong style="color:#276749;">✅ 課題2チェックポイント</strong>
+      <ul style="margin-top:8px; padding-left:18px; color:#555; line-height:1.9;">
+        <li>GTMプレビューで「Summary」を開く</li>
+        <li>このページで発火したタグの一覧を確認する</li>
+        <li>CV計測タグが <strong>このページだけ</strong> 発火していればOK</li>
+        <li>GA4のリアルタイムレポートで「purchase」イベントを確認する</li>
+      </ul>
+    </div>
+
+    <a href="index.html" class="btn-back">トップに戻る</a>
+  </div>
+
+  <footer class="footer">
+    <p>© STYLE DEMO — GTM・GA4 研修用テストサイト</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STYLE DEMO | GTM研修用テストサイト</title>
+  <!-- ========================================
+       GTMコンテナスニペット（head）
+       GTM-XXXXXXX をあなたのコンテナIDに書き換えてください
+       ======================================== -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- End GTM -->
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="index">
+  <!-- ========================================
+       GTMコンテナスニペット（body直後）
+       ======================================== -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End GTM (noscript) -->
+
+  <!-- 研修用バナー -->
+  <div class="gtm-banner">
+    <strong>📌 研修用テストサイト</strong> — このサイトはGTM・GA4のハンズオン用です。
+    GTMコンテナID・GA4計測IDは <code>GTM-XXXXXXX</code> を自分のIDに書き換えてください。
+  </div>
+
+  <header class="header">
+    <a href="index.html" class="logo">STYLE DEMO</a>
+    <nav>
+      <a href="products.html">商品一覧</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <a href="cart.html" class="cart-icon" aria-label="カート">
+      <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <span class="cart-count" style="display:none">0</span>
+    </a>
+  </header>
+
+  <!-- ヒーローセクション（課題3: CTAボタンのクリック計測対象） -->
+  <section class="hero">
+    <h1>NEW ARRIVALS</h1>
+    <p>シンプルで長く使えるベーシックウェアを。</p>
+    <a href="products.html" class="btn-hero" id="heroCta">今すぐ見る</a>
+  </section>
+
+  <!-- 注目商品セクション -->
+  <div class="section">
+    <h2 class="section-title">注目アイテム</h2>
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+
+  <!-- 外部リンクセクション（課題4: 外部リンク離脱クリック計測対象） -->
+  <div class="section" style="border-top: 1px solid #eee; padding-top: 32px;">
+    <h2 class="section-title">参考リンク</h2>
+    <p style="font-size:13px; color:#888; margin-bottom:16px;">↓ 課題4「外部リンク離脱クリック計測」の練習用リンクです</p>
+    <div style="display:flex; gap:16px; flex-wrap:wrap;">
+      <a href="https://anagrams.jp/blog/a-guide-for-using-google-tag-manager-for-the-first-time/" target="_blank" rel="noopener" style="color:#1a1a2e; text-decoration:underline; font-size:14px;">🔗 アナグラム：GTM入門</a>
+      <a href="https://support.google.com/tagmanager/?hl=ja" target="_blank" rel="noopener" style="color:#1a1a2e; text-decoration:underline; font-size:14px;">🔗 Google公式：GTMヘルプ</a>
+      <a href="https://anagrams.jp/blog/what-is-ga4-event/" target="_blank" rel="noopener" style="color:#1a1a2e; text-decoration:underline; font-size:14px;">🔗 アナグラム：GA4イベントとは</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© STYLE DEMO — GTM・GA4 研修用テストサイト</p>
+    <p style="margin-top:6px;">
+      <a href="https://anagrams.jp/blog/a-guide-for-using-google-tag-manager-for-the-first-time/" target="_blank" rel="noopener">GTM入門（アナグラム）</a>
+      <a href="https://support.google.com/tagmanager/?hl=ja" target="_blank" rel="noopener">Google公式ヘルプ</a>
+    </p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
