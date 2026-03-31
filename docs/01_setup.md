@@ -33,12 +33,34 @@
 
 ---
 
-## STEP 3：テストサイトにコンテナIDを設定する
+## STEP 3：研修用リポジトリをフォークして自分のサイトをデプロイする
 
-テストサイトの全HTMLファイルの `GTM-XXXXXXX` を自分のコンテナIDに書き換えます。
+研修サイトはGitHubに公開されています。**フォーク**（自分のアカウントにコピー）してGitHub Pagesで公開します。
 
-**VS Codeの場合（推奨）：**
-1. VS Codeでプロジェクトフォルダを開く
+**3-1. リポジトリをフォークする：**
+1. [github.com/tamanuki-nerds/gtm-demo-site](https://github.com/tamanuki-nerds/gtm-demo-site) を開く
+2. 右上の「**Fork**」ボタン → 「Create fork」をクリック
+3. 自分のアカウントに `gtm-demo-site` リポジトリがコピーされる
+
+**3-2. GitHub Pagesを有効にする：**
+1. 自分のリポジトリ（`github.com/あなたのID/gtm-demo-site`）→「Settings」→「Pages」
+2. Branch: `main` / Folder: `/ (root)` → 「Save」
+3. 数分後に `https://あなたのID.github.io/gtm-demo-site/` でアクセス可能になる
+
+---
+
+## STEP 4：テストサイトにコンテナIDを設定する
+
+フォークしたリポジトリをローカルにクローンし、GTMコンテナIDを書き換えます。
+
+**4-1. クローンする：**
+```bash
+git clone https://github.com/あなたのID/gtm-demo-site.git
+cd gtm-demo-site
+```
+
+**4-2. VS CodeでコンテナIDを一括置換する：**
+1. VS Codeでクローンしたフォルダを開く
 2. `Cmd+Shift+H`（Mac）または `Ctrl+Shift+H`（Windows）で「ファイル内検索と置換」を開く
 3. 検索：`GTM-XXXXXXX` → 置換：`GTM-あなたのID`（例：`GTM-AB12CD3`）
 4. 「すべて置換」をクリック
@@ -47,44 +69,14 @@
 - 再度 `GTM-XXXXXXX` で検索して0件になっていればOK
 - 7ファイル（index / products / product / cart / thanks / contact / form_lp）で置換されているはずです
 
----
-
-## STEP 4：GitHub Pagesにデプロイする
-
-> **Gitに慣れていない方へ：** GitはファイルをGitHubにアップロードするためのツールです。以下の手順を上から順に実行してください。
-
-**4-1. GitHub上にリポジトリを新規作成する（最初の1回）：**
-1. [github.com](https://github.com) にログイン
-2. 右上の「＋」→「New repository」をクリック
-3. Repository name：`gtm-demo-site`（任意）
-4. Public を選択（GitHub Pagesは無料プランでPublicのみ）
-5. 「Add a README file」は**チェックしない**
-6. 「Create repository」をクリック
-7. 表示された `https://github.com/あなたのID/gtm-demo-site.git` のURLをメモする
-
-**4-2. ターミナルでデプロイする：**
-
+**4-3. GitHubにプッシュする：**
 ```bash
-# プロジェクトフォルダに移動（パスはご自身の環境に合わせて変更）
-cd ~/Desktop/GTM
-
-# Gitの初期化（最初の1回だけ）
-git init
 git add .
-git commit -m "initial commit"
-
-# GitHubのリポジトリと接続（4-1でメモしたURLに変更）
-git branch -M main
-git remote add origin https://github.com/あなたのID/gtm-demo-site.git
-git push -u origin main
+git commit -m "feat: set GTM container ID"
+git push
 ```
 
-**GitHub Pagesを有効にする：**
-1. GitHubリポジトリ → 「Settings」タブ → 左メニューの「Pages」
-2. Branch: `main` / Folder: `/ (root)` → 「Save」
-3. 数分〜10分後に `https://あなたのID.github.io/gtm-demo-site/` でアクセス可能
-
-> URLが表示されたら実際にアクセスしてサイトが見えることを確認してください。
+> プッシュ後、数分でGitHub Pagesに反映されます。サイトにアクセスして表示を確認してください。
 
 ---
 
