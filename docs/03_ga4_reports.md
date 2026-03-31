@@ -1,3 +1,7 @@
+---
+title: "GA4レポートの見方（基礎3画面）"
+---
+
 # GA4レポートの見方（基礎3画面）
 
 > 所要時間：約20分
@@ -119,4 +123,4 @@
 - [GTMプレビューモードの使い方 — アナグラム](https://anagrams.jp/blog/gtm-previewmode-howtouse/)
 - [Google タグ マネージャー ヘルプ — Google公式](https://support.google.com/tagmanager/?hl=ja)
 
-次へ → [まとめ・振り返り](./04_summary.md)
+次へ → [まとめ・振り返り](./04_summary)

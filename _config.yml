@@ -1,0 +1,9 @@
+title: GTM・GA4 研修キット
+description: WEB広告代理店の新入社員向け、GTM・GA4ハンズオン研修用テストサイト
+theme: minima
+
+defaults:
+  - scope:
+      path: "docs"
+    values:
+      layout: default
